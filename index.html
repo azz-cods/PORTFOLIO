@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odiljanov Abdulaziz — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5ee;--surface:#fafaf4;--text:#1d2214;--muted:#6b7258;--accent:#5f7320;--accent-t:#fff;--line:#d8dcc6;--rgb:95,115,32;
+--hf:"Space Grotesk","Inter",system-ui,sans-serif;--bf:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f120a;--surface:#161a0e;--text:#ecefdf;--muted:#99a283;--accent:#aac04a;--accent-t:#0f120a;--line:#2b3220;--rgb:170,192,74;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f120a;--surface:#161a0e;--text:#ecefdf;--muted:#99a283;--accent:#aac04a;--accent-t:#0f120a;--line:#2b3220;--rgb:170,192,74;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 var(--bf);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.w{max-width:1080px;margin:auto;padding:0 24px}
+.bar{display:flex;align-items:center;gap:20px;height:60px}
+.logo{font:700 1.05rem var(--hf);letter-spacing:.04em;text-decoration:none}
+nav{display:flex;gap:22px;margin-left:auto;overflow-x:auto}
+nav a{font-size:.85rem;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s}
+nav a:hover{color:var(--text)}
+.ib{background:none;border:1px solid var(--line);color:var(--text);border-radius:6px;padding:5px 11px;cursor:pointer;font:500 .8rem var(--bf)}
+.ib:hover{border-color:var(--accent)}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.hero{position:relative;min-height:calc(100vh - 60px);display:flex;align-items:center;border-top:0;padding:60px 0;overflow:hidden}
+#gl{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0}
+main,footer{position:relative;z-index:1}
+.hero .w{position:relative;width:100%}
+.eye,.lbl{font:500 .75rem var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(2.6rem,8vw,5.6rem)/1.02 var(--hf);letter-spacing:-.03em;margin:.3em 0 .25em;max-width:12ch}
+.role{font:500 1.15rem var(--hf);color:var(--muted);margin:0 0 20px}
+.lead{max-width:520px;color:var(--muted);margin:0 0 32px}
+.btn{display:inline-block;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:500;font-size:.92rem;margin:0 10px 10px 0;border:1px solid var(--line);transition:all .2s}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-t)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+h2{font:600 clamp(1.8rem,4vw,2.6rem)/1.15 var(--hf);letter-spacing:-.02em;margin:.4em 0 1em;max-width:22ch}
+.two{display:grid;gap:48px;grid-template-columns:1.2fr 1fr}
+.two p{color:var(--muted);margin:0 0 1em}
+dl{margin:0}dl div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+dt{color:var(--muted);font-size:.85rem}dd{margin:0;font-weight:500;text-align:right}
+ul.g{padding:0;list-style:none;margin:24px 0 0}ul.g li{padding:8px 0 8px 22px;position:relative;color:var(--muted)}
+ul.g li::before{content:"";position:absolute;left:0;top:19px;width:10px;height:1px;background:var(--accent)}
+.sk{display:grid;grid-template-columns:140px 1fr 50px;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.sk b{font:600 1.05rem var(--hf)}.sk span{color:var(--muted);text-align:right;font-size:.9rem}
+.tr{height:2px;background:var(--line)}.tr i{display:block;height:100%;width:0;background:var(--accent);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.pr{display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line);transition:padding .3s}
+.pr:hover{padding-left:12px}
+.pr small{color:var(--muted);font:500 .85rem var(--hf)}.pr h3{margin:0 0 4px;font:600 1.4rem var(--hf)}.pr p{margin:0;color:var(--muted);max-width:56ch}
+.tag{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);padding:3px 10px;border-radius:4px;white-space:nowrap}
+.cta{font:600 clamp(1.6rem,5vw,3rem)/1.2 var(--hf);letter-spacing:-.02em;max-width:18ch;margin:.3em 0 28px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}
+#panel{position:fixed;right:20px;top:calc(70px + env(safe-area-inset-top,0px));z-index:11;display:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;box-shadow:0 18px 40px rgba(var(--rgb),.18)}
+#panel.open{display:block}#panel .lbl{display:block;margin-bottom:10px}#panel button{display:block;width:100%;margin-top:6px;text-align:left}
+#panel .on{background:var(--accent);color:var(--accent-t);border-color:var(--accent)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
+[dir=rtl] nav{margin-left:0;margin-right:auto}[dir=rtl] dd{text-align:left}[dir=rtl] ul.g li{padding:8px 22px 8px 0}[dir=rtl] ul.g li::before{left:auto;right:0}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:32px}.sk{grid-template-columns:90px 1fr 44px}.pr{grid-template-columns:36px 1fr}.pr .tag{grid-column:2;justify-self:start}section{padding:64px 0}nav{gap:14px}#gl{opacity:.45}}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:12}
+#sp{position:fixed;inset:0;pointer-events:none;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%);mask-image:radial-gradient(ellipse at 70% 40%,#000 0,transparent 70%)}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.code{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 30px 60px -24px rgba(var(--rgb),.4);font:.85rem/1.85 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow:hidden}
+.dots{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dots span{margin-left:10px;color:var(--muted);font-size:.78rem}
+.code pre{margin:0;padding:18px 20px;overflow-x:auto}
+.ln{display:block;opacity:0;animation:fi .6s forwards}
+.code b{color:var(--accent);font-weight:500}
+.code em{font-style:normal;color:#b98a3a}
+.cur{display:inline-block;width:7px;height:1em;background:var(--accent);vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes fi{to{opacity:1}}@keyframes bl{50%{opacity:0}}
+.mq{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0}
+.mq+section{border-top:0}
+.mt{display:inline-block;animation:mq 34s linear infinite;font:500 .78rem var(--hf);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.mt span{margin:0 28px}.mt span::after{content:"✦";margin-left:56px;color:var(--accent)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.pr h3::after{content:" ↗";color:var(--accent);opacity:0;transition:opacity .3s}.pr:hover h3::after{opacity:1}
+button.btn{background:none;color:inherit;font:500 .92rem var(--bf);cursor:pointer}
+@media(max-width:860px){.hg{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.mt,.cur{animation:none}.ln{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<div id="pg"></div><div id="sp"></div>
+<header><div class="w bar">
+<a class="logo" href="#home">OA</a>
+<nav><a href="#about" data-i="n2">Men haqimda</a><a href="#skills" data-i="n3">Koʻnikmalar</a><a href="#projects" data-i="n4">Loyihalar</a><a href="#contact" data-i="n5">Aloqa</a></nav>
+<button class="ib" id="theme" aria-label="Theme">Kun</button>
+<button class="ib" id="gear" data-i="set">Sozlamalar</button>
+</div></header>
+<div id="panel"><span class="lbl" data-i="lang">Til</span>
+<button class="ib" data-l="uz">Oʻzbekcha</button><button class="ib" data-l="ru">Русский</button><button class="ib" data-l="en">English</button><button class="ib" data-l="ar">العربية</button></div>
+
+<main>
+<section class="hero" id="home"><div class="w hg"><div>
+<div class="eye">IT AI CODING LAB · <span data-i="wt">Farhod teacher bilan</span></div>
+<h1>Odiljanov Abdulaziz</h1>
+<p class="role" data-i="role">Kelajakdagi Web Developer</p>
+<p class="lead" data-i="hero">Gʻoyalarni chiroyli va ishlaydigan saytlarga aylantiraman. Har kuni oʻrganaman va bir qadam oldinga yuraman.</p>
+<a class="btn p" href="#projects" data-i="b1">Loyihalarni koʻrish</a><a class="btn" href="#contact" data-i="b2">Bogʻlanish</a>
+</div>
+<div class="code"><div class="dots"><i></i><i></i><i></i><span>abdulaziz.js</span></div><pre><code><span class="ln" style="animation-delay:.3s"><b>const</b> dev = {</span><span class="ln" style="animation-delay:.7s">  name: <em>"Odiljanov Abdulaziz"</em>,</span><span class="ln" style="animation-delay:1.1s">  school: <em>"IT AI CODING LAB"</em>,</span><span class="ln" style="animation-delay:1.5s">  mentor: <em>"Farhod"</em>,</span><span class="ln" style="animation-delay:1.9s">  stack: [<em>"HTML"</em>, <em>"CSS"</em>, <em>"JS"</em>],</span><span class="ln" style="animation-delay:2.3s">  learning: <b>true</b>,</span><span class="ln" style="animation-delay:2.7s">};<i class="cur"></i></span></code></pre></div>
+</div></section>
+<div class="mq"><div class="mt"><span>Web Development</span><span>Frontend</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>IT AI CODING LAB</span><span>Web Development</span><span>Frontend</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>IT AI CODING LAB</span></div></div>
+
+<section id="about"><div class="w">
+<div class="lbl">01 — <span data-i="n2">Men haqimda</span></div>
+<h2 data-i="ab1">Texnologiyaga qiziqaman va har kuni oʻsishga intilaman.</h2>
+<div class="two"><div>
+<p data-i="ab2">Men IT AI CODING LAB’da oʻqiyman va veb-dasturlash asoslarini oʻrganyapman. Bilimimni kichik, lekin toʻliq loyihalar orqali mustahkamlayman.</p>
+<ul class="g"><li data-i="g1">Professional Web Developer boʻlish</li><li data-i="g2">Katta va foydali loyihalar yaratish</li><li data-i="g3">JavaScript va zamonaviy texnologiyalarni chuqur oʻrganish</li></ul></div>
+<dl><div><dt data-i="f1">Oʻqish joyi</dt><dd>IT AI CODING LAB<br><span data-i="wt">Farhod teacher bilan</span></dd></div><div><dt data-i="f2">Yoʻnalish</dt><dd>Web Development</dd></div><div><dt data-i="f3">Qiziqishlar</dt><dd data-i="f3v">Telefonlar, kompyuterlar, oʻyinlar, sayt yaratish</dd></div></dl>
+</div></div></section>
+
+<section id="skills"><div class="w">
+<div class="lbl">02 — <span data-i="n3">Koʻnikmalar</span></div>
+<h2 data-i="sk">Hozir oʻrganayotgan va amalda qoʻllayotgan texnologiyalar.</h2>
+<div class="sk"><b>HTML</b><div class="tr"><i data-w="70"></i></div><span>70%</span></div>
+<div class="sk"><b>CSS</b><div class="tr"><i data-w="60"></i></div><span>60%</span></div>
+<div class="sk"><b>JavaScript</b><div class="tr"><i data-w="40"></i></div><span>40%</span></div>
+</div></section>
+
+<section id="projects"><div class="w">
+<div class="lbl">03 — <span data-i="n4">Loyihalar</span></div>
+<h2 data-i="pj">Yaratgan va yaratayotgan ishlarim.</h2>
+<div class="pr"><small>01</small><div><h3>KH1 Auto</h3><p data-i="p1">Avtomobillar uchun zamonaviy sayt: aniq kartalar va qulay koʻrinish.</p></div><span class="tag" data-i="wip">Jarayonda</span></div>
+<div class="pr"><small>02</small><div><h3>Portfolio</h3><p data-i="p2">Zaytun ranglardagi, kun va tun rejimli shaxsiy sayt.</p></div><span class="tag" data-i="done">Tayyor</span></div>
+<div class="pr"><small>03</small><div><h3 data-i="p3t">Yangi loyiha</h3><p data-i="p3">Yangi gʻoya ustida ish tez orada boshlanadi.</p></div><span class="tag" data-i="soon">Tez orada</span></div>
+</div></section>
+
+<section id="contact"><div class="w">
+<div class="lbl">04 — <span data-i="n5">Aloqa</span></div>
+<p class="cta" data-i="ct">Hamkorlik uchun Telegramda menga DM yozing.</p>
+<a class="btn p" href="https://t.me/odlkhnff">Telegram — @odlkhnff</a><button class="btn" id="cp" data-i="cp">Nusxalash</button>
+</div></section>
+</main>
+<footer><div class="w">© Odiljanov Abdulaziz · IT AI CODING LAB</div></footer>
+
+<script>
+var T={
+uz:{n2:"Men haqimda",n3:"Koʻnikmalar",n4:"Loyihalar",n5:"Aloqa",set:"Sozlamalar",lang:"Til",role:"Kelajakdagi Web Developer",hero:"Gʻoyalarni chiroyli va ishlaydigan saytlarga aylantiraman. Har kuni oʻrganaman va bir qadam oldinga yuraman.",b1:"Loyihalarni koʻrish",b2:"Bogʻlanish",ab1:"Texnologiyaga qiziqaman va har kuni oʻsishga intilaman.",ab2:"Men IT AI CODING LAB’da oʻqiyman va veb-dasturlash asoslarini oʻrganyapman. Bilimimni kichik, lekin toʻliq loyihalar orqali mustahkamlayman.",g1:"Professional Web Developer boʻlish",g2:"Katta va foydali loyihalar yaratish",g3:"JavaScript va zamonaviy texnologiyalarni chuqur oʻrganish",f1:"Oʻqish joyi",f2:"Yoʻnalish",f3:"Qiziqishlar",f3v:"Telefonlar, kompyuterlar, oʻyinlar, sayt yaratish",sk:"Hozir oʻrganayotgan va amalda qoʻllayotgan texnologiyalar.",pj:"Yaratgan va yaratayotgan ishlarim.",p1:"Avtomobillar uchun zamonaviy sayt: aniq kartalar va qulay koʻrinish.",p2:"Zaytun ranglardagi, kun va tun rejimli shaxsiy sayt.",p3t:"Yangi loyiha",p3:"Yangi gʻoya ustida ish tez orada boshlanadi.",wip:"Jarayonda",done:"Tayyor",soon:"Tez orada",ct:"Hamkorlik uchun Telegramda menga DM yozing.",day:"Kun",night:"Tun",wt:"Farhod teacher bilan",cp:"Nusxalash"},
+ru:{n2:"Обо мне",n3:"Навыки",n4:"Проекты",n5:"Контакты",set:"Настройки",lang:"Язык",role:"Будущий веб-разработчик",hero:"Превращаю идеи в красивые и работающие сайты. Каждый день учусь и делаю шаг вперёд.",b1:"Смотреть проекты",b2:"Связаться",ab1:"Увлекаюсь технологиями и стремлюсь расти каждый день.",ab2:"Я учусь в IT AI CODING LAB и осваиваю основы веб-разработки. Закрепляю знания на небольших, но законченных проектах.",g1:"Стать профессиональным веб-разработчиком",g2:"Создавать большие и полезные проекты",g3:"Глубоко изучить JavaScript и современные технологии",f1:"Место учёбы",f2:"Направление",f3:"Интересы",f3v:"Телефоны, компьютеры, игры, создание сайтов",sk:"Технологии, которые я изучаю и применяю.",pj:"Что я создал и создаю.",p1:"Современный сайт об автомобилях: чёткие карточки и удобный вид.",p2:"Личный сайт в оливковых тонах с дневным и ночным режимом.",p3t:"Новый проект",p3:"Работа над новой идеей скоро начнётся.",wip:"В работе",done:"Готово",soon:"Скоро",ct:"Для сотрудничества напишите мне в личные сообщения Telegram.",day:"День",night:"Ночь",wt:"с учителем Farhod",cp:"Копировать"},
+en:{n2:"About",n3:"Skills",n4:"Projects",n5:"Contact",set:"Settings",lang:"Language",role:"Future Web Developer",hero:"I turn ideas into beautiful, working websites. I learn every day and move one step forward.",b1:"View projects",b2:"Get in touch",ab1:"I'm passionate about technology and aim to grow every day.",ab2:"I study at IT AI CODING LAB and am learning the foundations of web development. I strengthen my skills through small but complete projects.",g1:"Become a professional Web Developer",g2:"Build big and useful projects",g3:"Learn JavaScript and modern technologies in depth",f1:"Studying at",f2:"Focus",f3:"Interests",f3v:"Phones, computers, games, building websites",sk:"Technologies I'm learning and using.",pj:"Things I've built and am building.",p1:"A modern car website with clear cards and a comfortable layout.",p2:"A personal site in olive tones with day and night modes.",p3t:"New project",p3:"Work on a new idea will start soon.",wip:"In progress",done:"Done",soon:"Soon",ct:"For collaboration, send me a DM on Telegram.",day:"Day",night:"Night",wt:"with teacher Farhod",cp:"Copy"},
+ar:{n2:"عني",n3:"المهارات",n4:"المشاريع",n5:"التواصل",set:"الإعدادات",lang:"اللغة",role:"مطوّر ويب في المستقبل",hero:"أحوّل الأفكار إلى مواقع جميلة وتعمل بكفاءة. أتعلّم كل يوم وأتقدّم خطوة للأمام.",b1:"عرض المشاريع",b2:"تواصل معي",ab1:"شغوف بالتقنية وأسعى للتطور كل يوم.",ab2:"أدرس في IT AI CODING LAB وأتعلّم أساسيات تطوير الويب، وأرسّخ مهاراتي عبر مشاريع صغيرة مكتملة.",g1:"أن أصبح مطوّر ويب محترفاً",g2:"إنشاء مشاريع كبيرة ومفيدة",g3:"التعمّق في JavaScript والتقنيات الحديثة",f1:"مكان الدراسة",f2:"التخصص",f3:"الاهتمامات",f3v:"الهواتف، الحواسيب، الألعاب، إنشاء المواقع",sk:"التقنيات التي أتعلّمها وأستخدمها.",pj:"ما أنجزته وما أعمل عليه.",p1:"موقع حديث للسيارات ببطاقات واضحة وعرض مريح.",p2:"موقع شخصي بألوان الزيتون ووضعين نهاري وليلي.",p3t:"مشروع جديد",p3:"سيبدأ العمل على فكرة جديدة قريباً.",wip:"قيد التنفيذ",done:"جاهز",soon:"قريباً",ct:"للتعاون، راسلني على تيليجرام برسالة خاصة.",day:"نهار",night:"ليل",wt:"مع المعلم Farhod",cp:"نسخ"}
+};
+var R=document.documentElement,L="uz";
+function gt(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function st(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function lang(l){
+ if(!T[l])l="uz";L=l;
+ document.querySelectorAll("[data-i]").forEach(function(e){var v=T[l][e.dataset.i];if(v)e.textContent=v});
+ R.lang=l;R.dir=l==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-l]").forEach(function(b){b.classList.toggle("on",b.dataset.l===l)});
+ theme(R.dataset.theme);st("lang",l);
+}
+function theme(t){R.dataset.theme=t;document.getElementById("theme").textContent=T[L][t==="dark"?"night":"day"];st("theme",t)}
+document.querySelectorAll("[data-l]").forEach(function(b){b.onclick=function(){lang(b.dataset.l)}});
+document.getElementById("gear").onclick=function(){document.getElementById("panel").classList.toggle("open")};
+document.getElementById("theme").onclick=function(){theme(R.dataset.theme==="dark"?"light":"dark")};
+R.dataset.theme=gt("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+lang(gt("lang")||"uz");
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-w]").forEach(function(b){b.style.width=b.dataset.w+"%"});io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll("section:not(.hero) .w").forEach(function(s){s.classList.add("rv");io.observe(s)});
+var pg=document.getElementById("pg"),sp=document.getElementById("sp");
+addEventListener("scroll",function(){var h=R.scrollHeight-innerHeight;pg.style.transform="scaleX("+(h>0?scrollY/h:0)+")"},{passive:true});
+addEventListener("pointermove",function(e){sp.style.background="radial-gradient(520px circle at "+e.clientX+"px "+e.clientY+"px,rgba(var(--rgb),.11),transparent 65%)"});
+var nv={};document.querySelectorAll("nav a").forEach(function(a){nv[a.getAttribute("href").slice(1)]=a});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){for(var k in nv)nv[k].style.color=k===e.target.id?"var(--text)":""}})},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(function(s){so.observe(s)});
+document.getElementById("cp").onclick=function(){var b=this,o=b.textContent;try{navigator.clipboard.writeText("@odlkhnff")}catch(e){}b.textContent="✓";setTimeout(function(){b.textContent=o},1400)};
+(function(){
+ if(!window.THREE)return;
+ var cv=document.getElementById("gl"),r;
+ try{r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){return}
+ var s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(40,1,.1,100);cam.position.z=9;
+ s.add(new THREE.AmbientLight(0xffffff,.55));
+ var dl=new THREE.DirectionalLight(0xffffff,.9);dl.position.set(4,5,6);s.add(dl);
+ var geo=new THREE.IcosahedronGeometry(2.2,1);
+ var mat=new THREE.MeshStandardMaterial({flatShading:true,roughness:.55,metalness:.15});
+ var mesh=new THREE.Mesh(geo,mat);
+ var em=new THREE.LineBasicMaterial({transparent:true,opacity:.35});
+ var edges=new THREE.LineSegments(new THREE.EdgesGeometry(geo),em);
+ var grp=new THREE.Group();grp.add(mesh);grp.add(edges);
+ var shell=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(3.2,1)),em);grp.add(shell);
+ s.add(grp);
+ var mx=0,my=0,c=new THREE.Color(),k=0;
+ addEventListener("pointermove",function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+ function rs(){var w=innerWidth,h=innerHeight;r.setPixelRatio(Math.min(devicePixelRatio,2));r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();grp.scale.setScalar(w>760?.5:.28);grp.position.set(w>760?3.9:1.2,w>760?0:2.1,0)}
+ rs();addEventListener("resize",rs);
+ function loop(t){
+  t*=.001;cv.style.opacity=Math.min(1,Math.max(0,(scrollY-80)/300))*(innerWidth>760?.6:.35);
+  if(k++%30===0){var cs=getComputedStyle(R);c.set(cs.getPropertyValue("--accent").trim());mat.color.copy(c);em.color.set(cs.getPropertyValue("--text").trim())}
+  grp.rotation.y=t*.15+mx*.6;grp.rotation.x=t*.08+my*.4;shell.rotation.y=-t*.1;
+  r.render(s,cam);requestAnimationFrame(loop)
+ }
+ requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
